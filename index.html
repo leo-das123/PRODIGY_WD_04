@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Govind Dunda Bamble</title>
+  <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f4f4f9;
+      display: flex;
+    }
+
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100%;
+      background: #333;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 1rem;
+      overflow-y: auto;
+    }
+
+    .sidebar img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 0 auto;
+      display: block;
+      border: 3px solid orange;
+      
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .sidebar p {
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+
+    .sidebar nav {
+      margin-top: 2rem;
+    }
+
+    .sidebar nav a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 0.5rem 0;
+      padding: 0.5rem;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    .sidebar nav a:hover {
+      background: #6a11cb;
+    }
+
+   
+    .main-content {
+      margin-left: 250px;
+      padding: 2rem;
+      width: calc(100% - 250px);
+    }
+
+    header {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      position: relative;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    section {
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #2575fc;
+    }
+
+    .about, .projects, .contact {
+      text-align: center;
+    }
+
+    .about p {
+      margin: 1rem 0;
+      font-size: 1.1rem;
+    }
+
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 1.5rem;
+    }
+
+    .project {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      width: 300px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .project:hover {
+      transform: scale(1.05);
+    }
+
+    .project img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .project h3 {
+      font-size: 1.2rem;
+      margin: 1rem 0 0.5rem;
+      color: #6a11cb;
+    }
+
+    .project p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .fun-facts {
+      margin-top: 2rem;
+      background: #f9f9f9;
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+
+    .fun-facts ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .fun-facts li {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .contact input, .contact textarea {
+      width: 100%;
+      max-width: 600px;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact textarea {
+      resize: none;
+    }
+
+    .contact button {
+      background: #6a11cb;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact button:hover {
+      background: #2575fc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 0;
+      background: #333;
+      color: white;
+      margin-top: 2rem;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .main-content {
+        margin-left: 0;
+      }
+
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+      }
+
+      .sidebar img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sidebar">
+    <img src="img/profile-pic.png" alt="Photo">
+    <h2>Govind Dunda Bamble "LEO DASS"</h2>
+    <p>Web Developer | Designer | Creator</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#goals">Goals</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#fun">Funny Jokes</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <!-- <section>
+    <div>
+      <img src="profile-pic.png" alt="Your photo">
+    </div>
+  </section> -->
+
+  <div class="main-content">
+    <header>
+      <h1>Welcome to My Portfolio</h1>
+      <p>A showcase of my work, skills, and aspirations</p>
+    </header>
+
+    <section id="about" class="about">
+      <h2>About Me</h2>
+      <p>I'm a passionate web developer with experience in creating responsive and interactive websites. I love solving problems and turning ideas into digital experiences.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <p>HTML, CSS,  Python, and more.</p>
+    </section>
+
+    <section id="goals">
+      <h2>Goals</h2>
+      <p>To create innovative solutions that make people's lives easier and contribute to the tech community.</p>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <p>Worked on multiple projects, including web applications and responsive designs.</p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <p>B.Tech in Computer Science and Engineering (AI-ML)</p>
+    </section>
+
+    <section id="fun" class="fun-facts">
+      <h2>Funny Jokes</h2>
+      <ul>
+        <li>Why do programmers prefer dark mode? Because light attracts bugs!</li>
+        <li>Why was the JavaScript developer sad? Because he didn't know how to "null" his feelings.</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Me</h2>
+      <form action="#" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div style="margin-top: 2rem; text-align: center;">
+        <p>You can also find me on:</p>
+        <a href="https://www.linkedin.com" target="_blank" style="margin-right: 1rem; color: #2575fc;">LinkedIn</a>
+        <a href="https://github.com" target="
+
+
+        <!-- Image map --> it is used for visualization purposes only 
